@@ -5,7 +5,7 @@ HOMEPAGE = "https://gn.googlesource.com/gn/"
 inherit native
 
 SRC_URI = "git://gn.googlesource.com/gn;protocol=https;branch=master"
-SRCREV = "${AUTOREV}"
+SRCREV = "387b368dfe63fec317f8e609d90c634807f2764e"
 S = "${WORKDIR}/git"
 
 LICENSE = "MIT"
