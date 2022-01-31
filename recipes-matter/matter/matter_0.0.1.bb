@@ -76,7 +76,7 @@ GN_ARGS += 'host_pkg_config="pkg-config-native"'
 GN_ARGS += '${@oe.utils.conditional('DEBUG_BUILD','1','is_debug=true','is_debug=false',d)}'
 
 # Use lld linker, it's quicker, see https://lld.llvm.org/#performance
-GN_ARGS += "use_lld=true use_gold=false"
+GN_ARGS += "use_lld=true"
 
 # Don't treat compiler warning as errors, caused by clang version mismatch
 GN_ARGS += "treat_warnings_as_errors=false"
