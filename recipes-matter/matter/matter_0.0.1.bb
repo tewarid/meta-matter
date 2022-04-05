@@ -129,6 +129,8 @@ addtask write_toolchain_file after do_patch before do_configure
 do_configure() {
     ln -f -s ${TMPDIR}/hosttools/python3 ${TMPDIR}/hosttools/python
     cd ${S}/${MATTER_APP_DIR}
+    # Workaround for https://github.com/project-chip/connectedhomeip/issues/16844
+    touch build_overrides/pigweed_environment.gni
     gn gen --args='${GN_ARGS}' "${MATTER_OUT_DIR}"
 }
 
