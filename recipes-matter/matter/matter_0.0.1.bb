@@ -2,8 +2,9 @@ DESCRIPTION = "Matter is the foundation for connected things."
 HOMEPAGE = "https://buildwithmatter.com"
 
 SRC_URI = " \
-    gitsm://github.com/tewarid/matter.git;protocol=https;branch=poky \
+    gitsm://github.com/tewarid/matter.git;protocol=https;branch=master \
     file://matter.service \
+    file://0001-Do-not-hard-code-clang-target-for-arm.patch \
 "
 SRCREV = "${AUTOREV}"
 
