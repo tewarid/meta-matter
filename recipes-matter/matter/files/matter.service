@@ -1,10 +1,10 @@
 [Unit]
 Description=Matter smart home device
-After=bluetooth.target
-Requires=bluetooth.target
+After=bluetooth.target avahi-daemon.service wpa_supplicant.service
+Requires=bluetooth.target avahi-daemon.service wpa_supplicant.service
 
 [Service]
-ExecStartPre=/bin/sleep 15
+ExecStartPre=/bin/sleep 30
 ExecStart=/usr/bin/matterd --wifi
 Restart=always
 
